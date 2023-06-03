@@ -4,7 +4,7 @@
 #include <algorithm>
 template<typename T>
 class BST {
-  private:
+   private:
   struct Node {
     T value;
     int count;
@@ -18,12 +18,12 @@ class BST {
     else if (value < root->value) return searchNode(root->left, value);
     else if (value > root->value) return searchNode(root->right, value);
   }
-  int getDepth (Node* root) {
+  int getDepth(Node* root) {
     if (!root) return 0;
-    else return std::max(getDepth(root->left), getDepth(root->right)) + 1;
-  }
-  
-  public:
+    else
+      return std::max(getDepth(root->left), getDepth(root->right)) + 1;
+  }  
+   public:
   BST() : root(nullptr) {}
   void add(T value) {
     root = add_word(root, value);
@@ -50,7 +50,8 @@ class BST {
   int search(T value) {
     Node* temp = searchNode(root, value);
     if (temp != nullptr) return temp->count;
-    else return 0;
+    else
+      return 0;
   }
 };
 #endif  // INCLUDE_BST_H_

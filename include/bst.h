@@ -16,7 +16,8 @@ class BST {
     if (root == nullptr) return 0;
     else if (root->value == value) return root->count;
     else if (value < root->value) return searchNode(root->left, value);
-    else if (value > root->value) return searchNode(root->right, value);
+    else
+     return searchNode(root->right, value);
   }
   int getDepth(Node* root) {
     if (!root) return 0;

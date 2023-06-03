@@ -50,7 +50,7 @@ class BST {
   }
   int search(T value) {
     int temp = searchNode(root, value);
-    if (temp != nullptr) return temp;
+    if (temp != 0) return temp;
     else
       return 0;
   }

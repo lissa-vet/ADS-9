@@ -48,8 +48,8 @@ class BST {
     return getDepth(root) - 1;
   }
   int search(T value) {
-    Node* temp = searchNode(root, value);
-    if (temp != nullptr) return temp->count;
+    int temp = searchNode(root, value);
+    if (temp) return temp->count;
     else
       return 0;
   }
